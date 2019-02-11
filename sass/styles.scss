@@ -1,0 +1,191 @@
+$brand-color: #252628;
+$brand-color-secondary: #f4f4f4;
+$text-color: #fff;
+$headline-font: "Tahoma";
+$copy-font: "Palatino";
+$copy-padding-small: 5%;
+$copy-padding-large: 15%;
+$default-padding: 20px;
+$default-box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+$break-small: 400px;
+$break-medium: 700px;
+$break-exlarge: 1300px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: $headline-font;
+    color: $text-color;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+p {
+    font-family: $copy-font;
+    color: $text-color;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+a[href^="tel:"] {
+    color: $text-color;
+    white-space: nowrap;
+}
+
+main {
+    
+    max-width: $break-exlarge;
+    margin: 0 auto;
+}
+
+.headline, .contact {
+    background: $brand-color;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    img, .copy {
+        align-self: center;
+        flex: 0 100%;
+        width: 100%;
+        @media screen and (min-width: $break-medium) {
+            flex: 1 1 50%;
+            width: 50%;
+        }
+    }
+}
+
+.headline {
+    img {
+        order: 1;
+    }
+    .copy {
+        order: 2;
+        padding: $copy-padding-small;
+        @media screen and (min-width: $break-medium) {
+            padding: $copy-padding-small $copy-padding-large $copy-padding-small $copy-padding-small;
+        }
+    }
+    .copy + img {
+        border-right: solid 1px $text-color;
+    }
+}
+
+.contact {
+    @media screen and (max-width: $break-medium) {
+        img {
+            order: 1;
+        }
+        .copy {
+            order: 2;
+        }
+    }
+    .copy {
+        padding: $copy-padding-small;
+        @media screen and (min-width: $break-medium) {
+            padding: $copy-padding-small $copy-padding-small $copy-padding-small $copy-padding-large;
+        }
+        
+    }
+    .copy + img {
+        border-left: solid 1px $text-color;
+    }
+}
+
+.learnmore {
+    background: $brand-color-secondary;
+    width: 100%;
+    padding: $default-padding 10%;
+    .learnmore-inner {
+        background: $text-color;
+        box-shadow: $default-box-shadow;
+        flex: 0 100%;
+        display: flex;
+        flex-flow: wrap;
+        @media screen and (min-width: $break-medium) {
+            flex: 1 1 50%;
+        }
+        padding: $default-padding;
+        .links-list {
+            display: flex;
+            width: 100%;
+            @media screen and (max-width: $break-small) {
+                flex-wrap: wrap;
+            }
+            @media screen and (min-width: $break-medium) {
+                width: calc(50% + #{$default-padding});
+                flex-wrap: wrap;
+            }
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                margin: 0 $default-padding $default-padding 0;
+                @media screen and (max-width: $break-small) {
+                    margin: 0 0 $default-padding 0;
+                }
+                padding: 0;
+                list-style-type: none;
+                width: 100%;
+                
+                @media screen and (min-width: $break-medium) {
+                    width: calc(50% - #{$default-padding});
+                }
+                a {
+                    color: $brand-color;
+                    text-decoration: none;
+                    img {
+                        width: 100%;
+                        align-self: top;
+                    }
+                    span {
+                        margin: 0;
+                        font-family: $headline-font;
+                        text-transform: uppercase;
+                        font-size: .9rem;
+                        line-height: 1.4;
+                        display: block;
+                        font-weight: 700;
+                    }
+                    span + span {
+                        font-family: $copy-font;
+                        text-transform: none;
+                        font-size: .7rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .copy {
+            background: $brand-color;
+            width: 100%;
+            @media screen and (min-width: $break-medium) {
+                width: calc(50% - #{$default-padding});
+                position: relative;
+                left: 40px;
+            }
+            padding: $default-padding;
+            .copy-inner {
+                align-self: center;
+            }
+            ul {
+                li {
+                    font-family: $copy-font;
+                    color: $text-color;
+                    font-size: 0.9rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}
+

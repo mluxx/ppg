@@ -1,0 +1,246 @@
+/* line 15, /Users/mlux/ppg/sass/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 19, /Users/mlux/ppg/sass/styles.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, /Users/mlux/ppg/sass/styles.scss */
+h2 {
+  font-family: "Tahoma";
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* line 33, /Users/mlux/ppg/sass/styles.scss */
+p {
+  font-family: "Palatino";
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* line 40, /Users/mlux/ppg/sass/styles.scss */
+a[href^="tel:"] {
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* line 45, /Users/mlux/ppg/sass/styles.scss */
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* line 51, /Users/mlux/ppg/sass/styles.scss */
+.headline, .contact {
+  background: #252628;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 56, /Users/mlux/ppg/sass/styles.scss */
+.headline img, .headline .copy, .contact img, .contact .copy {
+  align-self: center;
+  flex: 0 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 56, /Users/mlux/ppg/sass/styles.scss */
+  .headline img, .headline .copy, .contact img, .contact .copy {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+}
+
+/* line 68, /Users/mlux/ppg/sass/styles.scss */
+.headline img {
+  order: 1;
+}
+
+/* line 71, /Users/mlux/ppg/sass/styles.scss */
+.headline .copy {
+  order: 2;
+  padding: 5%;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 71, /Users/mlux/ppg/sass/styles.scss */
+  .headline .copy {
+    padding: 5% 15% 5% 5%;
+  }
+}
+
+/* line 78, /Users/mlux/ppg/sass/styles.scss */
+.headline .copy + img {
+  border-right: solid 1px #fff;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 85, /Users/mlux/ppg/sass/styles.scss */
+  .contact img {
+    order: 1;
+  }
+  /* line 88, /Users/mlux/ppg/sass/styles.scss */
+  .contact .copy {
+    order: 2;
+  }
+}
+
+/* line 92, /Users/mlux/ppg/sass/styles.scss */
+.contact .copy {
+  padding: 5%;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 92, /Users/mlux/ppg/sass/styles.scss */
+  .contact .copy {
+    padding: 5% 5% 5% 15%;
+  }
+}
+
+/* line 99, /Users/mlux/ppg/sass/styles.scss */
+.contact .copy + img {
+  border-left: solid 1px #fff;
+}
+
+/* line 104, /Users/mlux/ppg/sass/styles.scss */
+.learnmore {
+  background: #f4f4f4;
+  width: 100%;
+  padding: 20px 10%;
+}
+
+/* line 108, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  flex: 0 100%;
+  display: flex;
+  flex-flow: wrap;
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 108, /Users/mlux/ppg/sass/styles.scss */
+  .learnmore .learnmore-inner {
+    flex: 1 1 50%;
+  }
+}
+
+/* line 118, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .links-list {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 118, /Users/mlux/ppg/sass/styles.scss */
+  .learnmore .learnmore-inner .links-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* line 118, /Users/mlux/ppg/sass/styles.scss */
+  .learnmore .learnmore-inner .links-list {
+    width: calc(50% + 20px);
+    flex-wrap: wrap;
+  }
+}
+
+/* line 131, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .links-list li {
+  margin: 0 20px 20px 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  /* line 131, /Users/mlux/ppg/sass/styles.scss */
+  .learnmore .learnmore-inner .links-list li {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* line 131, /Users/mlux/ppg/sass/styles.scss */
+  .learnmore .learnmore-inner .links-list li {
+    width: calc(50% - 20px);
+  }
+}
+
+/* line 143, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .links-list li a {
+  color: #252628;
+  text-decoration: none;
+}
+
+/* line 146, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .links-list li a img {
+  width: 100%;
+  align-self: top;
+}
+
+/* line 150, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .links-list li a span {
+  margin: 0;
+  font-family: "Tahoma";
+  text-transform: uppercase;
+  font-size: .9rem;
+  line-height: 1.4;
+  display: block;
+  font-weight: 700;
+}
+
+/* line 159, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .links-list li a span + span {
+  font-family: "Palatino";
+  text-transform: none;
+  font-size: .7rem;
+  font-weight: 400;
+}
+
+/* line 168, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .copy {
+  background: #252628;
+  width: 100%;
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 168, /Users/mlux/ppg/sass/styles.scss */
+  .learnmore .learnmore-inner .copy {
+    width: calc(50% - 20px);
+    position: relative;
+    left: 40px;
+  }
+}
+
+/* line 177, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .copy .copy-inner {
+  align-self: center;
+}
+
+/* line 181, /Users/mlux/ppg/sass/styles.scss */
+.learnmore .learnmore-inner .copy ul li {
+  font-family: "Palatino";
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=../css/styles.map */
